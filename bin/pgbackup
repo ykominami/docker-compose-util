@@ -1,0 +1,4 @@
+#!/bin/bash
+pg_dump -F c -v -U postgres -h localhost $1 -f /tmp/$2.psql
+
+

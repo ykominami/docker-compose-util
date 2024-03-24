@@ -1,0 +1,6 @@
+#/usr/bin/bash
+
+bin_dir=$(dirname $0)
+. ${bin_dir}/dc_functions
+# dc_cmd "pg" "up" "-d" "xdmc"
+dc_cmd "pg-redis-0" "up" "-d" 

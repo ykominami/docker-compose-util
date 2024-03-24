@@ -1,0 +1,5 @@
+#!/bin/bash
+pg_restore -c -C -F c -v -U postgres /tmp/$1.psql
+
+
+

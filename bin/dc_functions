@@ -1,0 +1,26 @@
+#/bin/bash
+# config_dir=~/dotfiles/docker/config
+function dc_cmd() {
+    local dir=$1
+    local cmd1=$2
+    local cmd2=$3
+    local cmd3=$4
+    local return_dir=`pwd`
+
+    config_top_dir=$(dirname $0)/../config
+    config_dir=${config_top_dir}/${dir}
+    cd ${config_dir}
+    config_file=./docker-compose.yml
+
+    # pwd
+    # echo docker compose -f ${config_file} ${cmd1} ${cmd2}
+    docker compose -f ${config_file} ${cmd1} ${cmd2}
+
+    cd ${return_dir}
+}
+
+
+
+
+
+

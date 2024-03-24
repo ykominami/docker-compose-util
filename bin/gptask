@@ -1,0 +1,8 @@
+# docker build -t gptask:latest .
+#
+docker run \
+    -it --rm \
+    -e "OPENAI_API_KEY=$OPENAI_API_KEY" \
+    -v "$PWD/workdir:/opt/gptask" \
+    gptask:latest \
+    gptask "あなたのタスクは..."
